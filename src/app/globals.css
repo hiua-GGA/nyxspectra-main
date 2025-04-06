@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg font-medium inline-flex items-center justify-center tracking-tight transition-all duration-300 text-sm sm:text-base;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-blue-600 border border-blue-200 hover:border-blue-300 shadow-sm hover:shadow-md transform hover:scale-105;
+  }
+
+  .btn-text {
+    @apply text-blue-600 bg-transparent hover:text-blue-700;
+  }
+
+  .logo-ticker-image {
+    @apply h-6 sm:h-8 w-auto;
+  }
+
+  .tag {
+    @apply text-xs sm:text-sm inline-flex border border-[#222]/10 px-2 sm:px-3 py-0.5 sm:py-1 rounded-lg tracking-tight;
+  }
+
+  .section-title {
+    @apply text-center text-2xl sm:text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
+  }
+
+  .section-des {
+    @apply text-center text-base sm:text-lg md:text-[22px] leading-normal md:leading-[30px] tracking-tight text-[#010D3E];
+  }
+
+  .section-heading {
+    @apply max-w-[540px] mx-auto;
+  }
+
+  .card {
+    @apply p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full transition-all duration-300 hover:shadow-lg hover:border-blue-100;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full;
+  }
+
+  .glass-effect {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text;
+  }
+
+  /* Responsive grid utilities */
+  .responsive-grid-2 {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8;
+  }
+
+  .responsive-grid-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8;
+  }
+
+  .responsive-grid-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8;
+  }
+
+  /* Spacing utilities */
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .section-spacing {
+    @apply mb-12 sm:mb-16 md:mb-20 lg:mb-24;
+  }
+
+  /* Responsive text utilities */
+  .heading-1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  .heading-2 {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+  }
+
+  .heading-3 {
+    @apply text-xl sm:text-2xl md:text-3xl font-bold;
+  }
+
+  .paragraph-large {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+
+  .paragraph {
+    @apply text-sm sm:text-base;
+  }
+
+  .paragraph-small {
+    @apply text-xs sm:text-sm;
+  }
+}
+/* globals.css */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* For fixed header navigation */
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.8s ease-in-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.8s ease-in-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-in-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 7s ease-in-out 1s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 0.2s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 0.4s forwards;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 0.6s forwards;
+}
+
+.animate-blur-in {
+  animation: blurIn 1s ease-in-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes blurIn {
+  0% { opacity: 0; filter: blur(10px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+
+/* Media query utility classes */
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Mobile menu utility */
+.mobile-menu-open {
+  overflow: hidden;
+}
+
+/* Utility for animating gradient backgrounds */
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Blob animation for background elements */
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
